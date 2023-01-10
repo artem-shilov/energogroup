@@ -33,11 +33,13 @@ body {
   font-weight: 500;
   color: #000000;
 }
+
 input {
+  color: $white;
+  width: 100%;
   background: transparent;
   border: none;
   outline: none;
-  color: $white;
 
   &::placeholder {
     color: #949494;
@@ -119,8 +121,6 @@ input {
   max-width: 571px;
   color: $gray;
 }
-// .about {
-// }
 
 .about-content {
   display: flex;
@@ -408,6 +408,9 @@ input {
     margin-bottom: 22px;
   }
 }
+.error {
+  border: 1px solid red !important;
+}
 
 .popup-form {
   padding: 49px 68px 55px 41px;
@@ -417,20 +420,28 @@ input {
   }
   .personal {
     & fieldset {
+      border: 1px solid #000000;
       & legend {
         color: #000000;
       }
       & input {
         color: #000000;
+        &:focus + legend {
+          color: #949494;
+        }
       }
     }
   }
   .comment {
+    border: 1px solid #000000;
     & legend {
       color: #000000;
     }
     & textarea {
       color: #000000;
+    }
+    & textarea:focus + legend {
+      color: #949494;
     }
   }
   .submit {
@@ -446,6 +457,7 @@ input {
         color: #000000;
       }
     }
+
     .btn-submit {
       background: #2c3f68;
       color: $white;
@@ -677,11 +689,18 @@ input {
   & fieldset {
     width: 312px;
     height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
     & legend {
       color: $white;
       font-weight: 600;
       font-size: 14px;
       line-height: 150%;
+    }
+    & input:focus + legend {
+      color: #d8d8d8;
     }
   }
 }
@@ -708,6 +727,9 @@ input {
       color: #949494;
       font-size: 16px;
       line-height: 150%;
+    }
+    &:focus + legend {
+      color: #d8d8d8;
     }
   }
 }
@@ -736,8 +758,6 @@ input {
   }
   #custom-checkbox + label::before {
     content: '';
-
-    // position: absolute;
     display: inline-block;
     width: 22px;
     height: 22px;
@@ -748,6 +768,7 @@ input {
     background-position: center center;
     background-size: 50% 50%;
   }
+
   #custom-checkbox:checked + label::before {
     // background-position: center right;
     // background-repeat: no-repeat;

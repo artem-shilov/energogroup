@@ -14,7 +14,7 @@
     <section class="main">
       <header class="header">
         <div class="container">
-          <nav class="menu" >
+          <nav class="menu">
             <ul class="menu-list" id="menu">
               <li class="menu-list__item">
                 <a href="#about" class="item__link"> О Компании</a>
@@ -25,7 +25,7 @@
               <li class="menu-list__item">
                 <a href="#objects" class="item__link">Объекты</a>
               </li>
-             
+
               <li class="menu-list__item">
                 <a href="#contacts" class="item__link">Контакты</a>
               </li>
@@ -127,9 +127,6 @@
             <p class="block-description">Промышленных объектов, инженерных систем.</p>
           </div>
         </div>
-        
-
-       
       </div>
     </section>
     <div class="popup" data-target="one">
@@ -148,47 +145,44 @@
             бесперебойную и надежную работу оборудования.
           </p>
           <p class="popup-text">
-            Стоимость монтажа вентиляционной системы определяется особенностями объекта,
-            качеством и количеством использованного оборудования. Поэтому специалисты начинают
-            работу с подробного изучения здания и составления индивидуального проекта с учетом
-            технических условий на объекте.
+            Стоимость монтажа вентиляционной системы определяется особенностями объекта, качеством и
+            количеством использованного оборудования. Поэтому специалисты начинают работу с
+            подробного изучения здания и составления индивидуального проекта с учетом технических
+            условий на объекте.
           </p>
           <p class="popup-text">
             Если монтаж производится в эксплуатируемом здании, работы начинаются с демонтажа
-            имеющейся системы кондиционирования и вентиляционного оборудования. В таком случае
-            при расчете цены на монтаж вентиляции будет учтена стоимости демонтажа.
+            имеющейся системы кондиционирования и вентиляционного оборудования. В таком случае при
+            расчете цены на монтаж вентиляции будет учтена стоимости демонтажа.
           </p>
         </div>
-        <div class="popup-form">
+        <form class="form popup-form">
           <p class="form-title">оставьте заявку</p>
           <div class="personal">
             <fieldset>
-              <legend>Ваше имя</legend>
-              <label for="name"></label>
-              <input type="text" id="name" />
+              <input class="input" type="text" id="name" />
+              <legend id="legend">Ваше имя</legend>
             </fieldset>
             <fieldset>
+              <input class="input input-phone" type="tel" data-phone-pattern />
               <legend>Номер телефона</legend>
-              <label> <input type="tel" pattern="2[0-9]{3}-[0-9]{3}" /></label>
             </fieldset>
           </div>
           <fieldset class="comment">
+            <textarea
+              placeholder="Опишите Ваш вопрос или просьбу и удобное время для связи."
+            ></textarea>
             <legend>Комментарий</legend>
-            <label>
-              <textarea
-                placeholder="Опишите Ваш вопрос или просьбу и удобное время для связи."
-              ></textarea>
-            </label>
           </fieldset>
           <div class="submit">
             <div class="checkbox">
               <input type="checkbox" id="custom-checkbox" />
-              <label for="custom-checkbox"></label>
+              <label class="checkbox-label" for="custom-checkbox"></label>
               <p class="checkbox-text">Я ознакомлен и согласен с <a href="#!">правилами</a></p>
             </div>
-            <button class="btn-submit">Отправить</button>
+            <button type="submit" class="btn-submit">Отправить</button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
     <div class="benefits">
@@ -278,7 +272,7 @@
         </div>
       </div>
     </section>
-    
+
     <footer class="footer">
       <div class="container">
         <div class="footer__content">
@@ -299,37 +293,34 @@
               <a href="#!">Политика обработки персональных данных</a>
             </div>
           </div>
-          <div class="footer__content-left">
-            <div class="form" id="contacts">
+          <div class="footer__content-left" id="contacts">
+            <form class="form">
               <p class="form-title">оставьте заявку</p>
               <div class="personal">
                 <fieldset>
+                  <input class="input" type="text" id="name" />
                   <legend>Ваше имя</legend>
-                  <label for="name"></label>
-                  <input type="text" id="name" />
                 </fieldset>
                 <fieldset>
+                  <input class="input input-phone" type="tel" data-phone-pattern />
                   <legend>Номер телефона</legend>
-                  <label> <input type="tel" pattern="2[0-9]{3}-[0-9]{3}" /></label>
                 </fieldset>
               </div>
               <fieldset class="comment">
+                <textarea
+                  placeholder="Опишите Ваш вопрос или просьбу и удобное время для связи."
+                ></textarea>
                 <legend>Комментарий</legend>
-                <label>
-                  <textarea
-                    placeholder="Опишите Ваш вопрос или просьбу и удобное время для связи."
-                  ></textarea>
-                </label>
               </fieldset>
               <div class="submit">
                 <div class="checkbox">
                   <input type="checkbox" id="custom-checkbox" />
-                  <label for="custom-checkbox"></label>
+                  <label class="custom-checkbox" for="custom-checkbox"></label>
                   <p class="checkbox-text">Я ознакомлен и согласен с <a href="#!">правилами</a></p>
                 </div>
-                <button class="btn-submit">Отправить</button>
+                <button type="submit" class="btn-submit">Отправить</button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
