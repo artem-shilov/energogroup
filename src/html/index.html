@@ -156,15 +156,15 @@
             расчете цены на монтаж вентиляции будет учтена стоимости демонтажа.
           </p>
         </div>
-        <form class="form popup-form">
+        <form class=" popup-form">
           <p class="form-title">оставьте заявку</p>
           <div class="personal">
             <fieldset>
-              <input class="input" type="text" id="name" />
+              <input class="popup-input" type="text" id="name" />
               <legend id="legend">Ваше имя</legend>
             </fieldset>
             <fieldset>
-              <input class="input input-phone" type="tel" data-phone-pattern />
+              <input class="popup-input" type="tel" data-phone-pattern />
               <legend>Номер телефона</legend>
             </fieldset>
           </div>
@@ -175,10 +175,11 @@
             <legend>Комментарий</legend>
           </fieldset>
           <div class="submit">
-            <div class="checkbox">
-              <input type="checkbox" id="custom-checkbox" />
-              <label class="checkbox-label" for="custom-checkbox"></label>
-              <p class="checkbox-text">Я ознакомлен и согласен с <a href="#!">правилами</a></p>
+            <div class="checkbox-form">
+              <input class="checkbox-popup" type="checkbox" id="checkbox-popup" />
+              <label class="custom-checkbox" for="checkbox-popup"
+                ><p>Я ознакомлен и согласен с <span>правилами</span></p></label
+              >
             </div>
             <button type="submit" class="btn-submit">Отправить</button>
           </div>
@@ -302,7 +303,7 @@
                   <legend>Ваше имя</legend>
                 </fieldset>
                 <fieldset>
-                  <input class="input input-phone" type="tel" data-phone-pattern />
+                  <input class="input" type="tel" data-phone-pattern />
                   <legend>Номер телефона</legend>
                 </fieldset>
               </div>
@@ -313,10 +314,11 @@
                 <legend>Комментарий</legend>
               </fieldset>
               <div class="submit">
-                <div class="checkbox">
-                  <input type="checkbox" id="custom-checkbox" />
-                  <label class="custom-checkbox" for="custom-checkbox"></label>
-                  <p class="checkbox-text">Я ознакомлен и согласен с <a href="#!">правилами</a></p>
+                <div class="checkbox-form">
+                  <input class="checkbox" type="checkbox" id="checkbox" />
+                  <label class="custom-checkbox" for="checkbox"
+                    ><p>Я ознакомлен и согласен с <span>правилами</span></p></label
+                  >
                 </div>
                 <button type="submit" class="btn-submit">Отправить</button>
               </div>
