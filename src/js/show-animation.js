@@ -13,7 +13,7 @@ let options = {
 };
 let observer = new IntersectionObserver(onEntry, options);
 let elementMore = document.querySelectorAll('.block-link');
-let elementsNumber = document.querySelectorAll('.number');
+let elementsNumber = document.querySelectorAll('.number-hidden');
 let elementsBlock = document.querySelectorAll('.benefits-block');
 
 for (let elm of elementsNumber) {
