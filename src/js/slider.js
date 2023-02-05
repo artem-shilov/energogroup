@@ -22,8 +22,3 @@ $('.objects-slider').slick({
   ],
 });
 
-// $('.slick-dots li').html(
-//   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-//     <rect x="0.695068" y="0.452148" width="10.9004" height="10.9004" fill="#D8D8D8" />
-//   </svg>,
-// );

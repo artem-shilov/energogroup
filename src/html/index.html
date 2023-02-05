@@ -112,37 +112,51 @@
       <section class="activity" id="activity">
         <div class="container">
           <h3 class="activity-title">направления деятельности</h3>
-          <div class="activity-content">
-            <div class="block" data-popup="one">
-              <p class="block-title">строительство</p>
-              <p class="block-description">
-                Возведение жилых, промышленных зданий и складских терминалов.
-              </p>
-              <p class="block-link"><a class="" href="#!">Подробнее</a></p>
-            </div>
+          <ul class="activity__list">
+            <li class="activity__list-item" data-path="one">
+              <div class="item__inner">
+                <p class="item-title">строительство</p>
+                <p class="item-description">
+                  Возведение жилых, промышленных зданий и складских терминалов.
+                </p>
+                <p class="item-link"><span>Подробнее</span></p>
+              </div>
+            </li>
 
-            <div class="block">
-              <p class="block-title">снабжение</p>
-              <p class="block-description">
-                Снабжение строительных объектов материалами и оборудованием.
-              </p>
-            </div>
-            <div class="block">
-              <p class="block-title">электроснабжение</p>
-              <p class="block-description">Комплексные работы по электроснабжению ПИР и СМР.</p>
-            </div>
-            <div class="block">
-              <p class="block-title">электротехническое строительство</p>
-              <p class="block-description">
-                Строительство объектов электротехнических сетей,поставка и монтаж трансформаторных
-                подстанций.
-              </p>
-            </div>
-            <div class="block">
-              <p class="block-title">проектирование</p>
-              <p class="block-description">Промышленных объектов, инженерных систем.</p>
-            </div>
-          </div>
+            <li class="activity__list-item" data-path="two">
+              <div class="item__inner">
+                <p class="item-title">снабжение</p>
+                <p class="item-description">
+                  Снабжение строительных объектов материалами и оборудованием.
+                </p>
+                <p class="item-link"><span>Подробнее</span></p>
+              </div>
+            </li>
+            <li class="activity__list-item" data-path="three">
+              <div class="item__inner">
+                <p class="item-title">электроснабжение</p>
+                <p class="item-description">Комплексные работы по электроснабжению ПИР и СМР.</p>
+                <p class="item-link"><span>Подробнее</span></p>
+              </div>
+            </li>
+            <li class="activity__list-item" data-path="four">
+              <div class="item__inner">
+                <p class="item-title">электротехническое строительство</p>
+                <p class="item-description">
+                  Строительство объектов электротехнических сетей,поставка и монтаж трансформаторных
+                  подстанций.
+                </p>
+                <p class="item-link"><span>Подробнее</span></p>
+              </div>
+            </li>
+            <li class="activity__list-item" data-path="five">
+              <div class="item__inner">
+                <p class="item-title">проектирование</p>
+                <p class="item-description">Промышленных объектов, инженерных систем.</p>
+                <p class="item-link"><span>Подробнее</span></p>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
       <div class="benefits">
@@ -266,18 +280,16 @@
             расчете цены на монтаж вентиляции будет учтена стоимости демонтажа.
           </p>
         </div>
-        <form class="popup-form">
+        <form class="popup-form" id="popup-form1">
           <p class="form-title">оставьте заявку</p>
           <div class="personal">
             <fieldset>
-              <input class="popup-input" type="text" id="name" />
+              <input class="input input-name" type="text" />
               <legend id="legend">Ваше имя</legend>
-              <!-- <span class="error-message">Введите ваше имя</span> -->
             </fieldset>
             <fieldset>
-              <input class="popup-input" type="tel" data-phone-pattern="+7 (___) ___-__-__" />
+              <input class="input input-tel" type="tel" data-phone-pattern="+7 (___) ___-__-__" />
               <legend>Номер телефона</legend>
-              <!-- <span class="error-message">Введите ваш телефон</span> -->
             </fieldset>
           </div>
           <fieldset class="comment">
@@ -287,18 +299,78 @@
             <legend>Комментарий</legend>
           </fieldset>
           <div class="submit">
-            <!-- <div class="checkbox-form"> -->
-              <input class="checkbox-popup" type="checkbox" id="checkbox-popup" />
-              <label class="custom-checkbox" for="checkbox-popup"
+            <div class="checkbox">
+              <input class="checkbox__input" type="checkbox" id="formAgreementPopup" />
+              <label class="checkbox__label" for="formAgreementPopup"
                 ><p>Я ознакомлен и согласен с <span>правилами</span></p></label
               >
-            <!-- </div> -->
+            </div>
+
             <button type="submit" class="btn-submit">Отправить</button>
           </div>
         </form>
       </div>
     </div>
-    <footer class="footer">
+    <div class="popup" data-target="two">
+      <div class="popup__inner">
+        <div class="popup__header">
+          <img src="img/activity/popup/block-1.jpg" alt="block-1" />
+          <div class="popup-close">
+            <img src="img/activity/popup/popup-close.svg" alt="popup-close" />
+          </div>
+        </div>
+        <div class="popup__description">
+          <h2 class="popup-title">Снабжение</h2>
+          <p class="popup-text">
+            Компания «СтройЭнергоГРУПП» выполняет монтаж систем вентиляции . Проектирование и
+            установка осуществляются в соответствии с требованиями ГОСТ. Мы гарантируем
+            бесперебойную и надежную работу оборудования.
+          </p>
+          <p class="popup-text">
+            Стоимость монтажа вентиляционной системы определяется особенностями объекта, качеством и
+            количеством использованного оборудования. Поэтому специалисты начинают работу с
+            подробного изучения здания и составления индивидуального проекта с учетом технических
+            условий на объекте.
+          </p>
+          <p class="popup-text">
+            Если монтаж производится в эксплуатируемом здании, работы начинаются с демонтажа
+            имеющейся системы кондиционирования и вентиляционного оборудования. В таком случае при
+            расчете цены на монтаж вентиляции будет учтена стоимости демонтажа.
+          </p>
+        </div>
+        <form class="popup-form" id="popup-form2">
+          <p class="form-title">оставьте заявку</p>
+          <div class="personal">
+            <fieldset>
+              <input class="input input-name" type="text" />
+              <legend id="legend">Ваше имя</legend>
+            </fieldset>
+            <fieldset>
+              <input class="input input-tel" type="tel" data-phone-pattern="+7 (___) ___-__-__" />
+              <legend>Номер телефона</legend>
+            </fieldset>
+          </div>
+          <fieldset class="comment">
+            <textarea
+              placeholder="Опишите Ваш вопрос или просьбу и удобное время для связи."
+            ></textarea>
+            <legend>Комментарий</legend>
+          </fieldset>
+          <div class="submit">
+            <div class="checkbox">
+              <input class="checkbox__input" type="checkbox" id="formAgreementPopup" />
+              <label class="checkbox__label" for="formAgreementPopup"
+                ><p>Я ознакомлен и согласен с <span>правилами</span></p></label
+              >
+            </div>
+
+            <button type="submit" class="btn-submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer" id="contacts">
       <div class="container">
         <div class="footer__content">
           <div class="footer__information">
@@ -320,16 +392,15 @@
             </div>
           </div>
 
-          <!-- <div class="footer__content-left" > -->
-          <form class="form" id="contacts">
+          <form class="form" id="form" name="form">
             <p class="form-title">оставьте заявку</p>
             <div class="personal">
               <fieldset>
-                <input class="input" type="text" id="name" />
+                <input class="input input-name" type="text" id="name" data-reg="^[А-ЯЁ][а-яё]*$" />
                 <legend>Ваше имя</legend>
               </fieldset>
               <fieldset>
-                <input class="input" type="tel" data-phone-pattern="+7 (___) ___-__-__" />
+                <input class="input input-tel" type="tel" data-phone-pattern="+7 (___) ___-__-__"    data-reg="^((\+7|7|8)+([0-9]){10})$" />
                 <legend>Номер телефона</legend>
               </fieldset>
             </div>
@@ -340,20 +411,15 @@
               <legend>Комментарий</legend>
             </fieldset>
             <div class="submit">
-              <!-- <div class="checkbox-form"> -->
-              <input class="checkbox" type="checkbox" id="checkbox" />
-              <label class="custom-checkbox" for="checkbox"
-                ><p>Я ознакомлен и согласен с <span>правилами</span></p></label
-              >
-              <!-- </div> -->
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="formAgreement" />
+                <label class="checkbox__label" for="formAgreement"
+                  ><p>Я ознакомлен и согласен с <span>правилами</span></p></label
+                >
+              </div>
+
               <button type="submit" class="btn-submit">Отправить</button>
             </div>
-            <!-- <div class="response">
-                <h4 class="response-title">ваша заявка отправлена,</h4>
-                <p class="response-subtitle">мы свяжемся с Вами в ближайшее время.</p>
-              </div> -->
-
-            <!-- </div> -->
           </form>
           <div class="policy-hidden">
             <p>Все права защищены 2010 - 2022 © ООО «СтройЭнергоГРУПП»</p>

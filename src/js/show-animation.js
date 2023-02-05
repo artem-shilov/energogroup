@@ -12,7 +12,7 @@ let options = {
   threshold: [0.5],
 };
 let observer = new IntersectionObserver(onEntry, options);
-let elementMore = document.querySelectorAll('.block-link');
+let elementMore = document.querySelectorAll('.item-link');
 let elementsNumber = document.querySelectorAll('.number-hidden');
 let elementsBlock = document.querySelectorAll('.benefits-block');
 
