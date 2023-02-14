@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Стройэнергогрупп</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
     <link rel="stylesheet" href="css/main.min.css" />
     <script defer src="js/main.min.js"></script>
   </head>
@@ -13,7 +22,7 @@
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <p class="logo"><a href="#intro"> стройэнергогрупп</a></p>
+          <p class="logo"><a href="#about"> стройэнергогрупп</a></p>
           <nav class="menu">
             <ul class="menu-list" id="menu">
               <li class="menu-list__item">
@@ -41,20 +50,6 @@
 
     <main class="main">
       <div class="btn-up btn-up_hide"><span>&#8593;</span></div>
-      <section class="intro" id="intro">
-        <div class="container">
-          <div class="intro__content">
-            <div class="intro__logo">
-              <img class="intro-img" src="img/intro/logo.svg" alt="logo" />
-              <h1 class="intro-title">стройэнергогрупп</h1>
-            </div>
-            <p class="intro-subtitle">
-              Динамично развивающаяся строительно - торговая группа на рынке строительных услуг
-              полного цикла различной степени сложности.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <section class="about" id="about">
         <div class="container">
@@ -280,28 +275,34 @@
             расчете цены на монтаж вентиляции будет учтена стоимости демонтажа.
           </p>
         </div>
-        <form class="popup-form" id="popup-form1">
+        <form class="popup-form" >
           <p class="form-title">оставьте заявку</p>
           <div class="personal">
             <fieldset>
-              <input class="input input-name" type="text" />
-              <legend id="legend">Ваше имя</legend>
+              <input class="input input-name req" type="text" name="name" />
+              <legend>Ваше имя</legend>
             </fieldset>
             <fieldset>
-              <input class="input input-tel" type="tel" data-phone-pattern="+7 (___) ___-__-__" />
+              <input
+                class="input input-tel req"
+                type="text"
+                name="phone"
+                data-phone-pattern="+7 (___) ___-__-__"
+              />
               <legend>Номер телефона</legend>
             </fieldset>
           </div>
           <fieldset class="comment">
             <textarea
+              name="message"
               placeholder="Опишите Ваш вопрос или просьбу и удобное время для связи."
             ></textarea>
             <legend>Комментарий</legend>
           </fieldset>
           <div class="submit">
             <div class="checkbox">
-              <input class="checkbox__input" type="checkbox" id="formAgreementPopup" />
-              <label class="checkbox__label" for="formAgreementPopup"
+              <input class="checkbox__input req" type="checkbox" id="popup-checkbox" />
+              <label class="checkbox__label" for="popup-checkbox"
                 ><p>Я ознакомлен и согласен с <span>правилами</span></p></label
               >
             </div>
@@ -338,28 +339,226 @@
             расчете цены на монтаж вентиляции будет учтена стоимости демонтажа.
           </p>
         </div>
-        <form class="popup-form" id="popup-form2">
+        <form class="popup-form" >
           <p class="form-title">оставьте заявку</p>
           <div class="personal">
             <fieldset>
-              <input class="input input-name" type="text" />
-              <legend id="legend">Ваше имя</legend>
+              <input class="input input-name req" type="text" name="name" />
+              <legend>Ваше имя</legend>
             </fieldset>
             <fieldset>
-              <input class="input input-tel" type="tel" data-phone-pattern="+7 (___) ___-__-__" />
+              <input
+                class="input input-tel req"
+                type="text"
+                name="phone"
+                data-phone-pattern="+7 (___) ___-__-__"
+              />
               <legend>Номер телефона</legend>
             </fieldset>
           </div>
           <fieldset class="comment">
             <textarea
+              name="message"
               placeholder="Опишите Ваш вопрос или просьбу и удобное время для связи."
             ></textarea>
             <legend>Комментарий</legend>
           </fieldset>
           <div class="submit">
             <div class="checkbox">
-              <input class="checkbox__input" type="checkbox" id="formAgreementPopup" />
-              <label class="checkbox__label" for="formAgreementPopup"
+              <input class="checkbox__input req" type="checkbox" id="popup-checkbox-2" />
+              <label class="checkbox__label" for="popup-checkbox-2"
+                ><p>Я ознакомлен и согласен с <span>правилами</span></p></label
+              >
+            </div>
+
+            <button type="submit" class="btn-submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="popup" data-target="three">
+      <div class="popup__inner">
+        <div class="popup__header">
+          <img src="img/activity/popup/block-1.jpg" alt="block-1" />
+          <div class="popup-close">
+            <img src="img/activity/popup/popup-close.svg" alt="popup-close" />
+          </div>
+        </div>
+        <div class="popup__description">
+          <h2 class="popup-title">Электроснабжение</h2>
+          <p class="popup-text">
+            Компания «СтройЭнергоГРУПП» выполняет монтаж систем вентиляции . Проектирование и
+            установка осуществляются в соответствии с требованиями ГОСТ. Мы гарантируем
+            бесперебойную и надежную работу оборудования.
+          </p>
+          <p class="popup-text">
+            Стоимость монтажа вентиляционной системы определяется особенностями объекта, качеством и
+            количеством использованного оборудования. Поэтому специалисты начинают работу с
+            подробного изучения здания и составления индивидуального проекта с учетом технических
+            условий на объекте.
+          </p>
+          <p class="popup-text">
+            Если монтаж производится в эксплуатируемом здании, работы начинаются с демонтажа
+            имеющейся системы кондиционирования и вентиляционного оборудования. В таком случае при
+            расчете цены на монтаж вентиляции будет учтена стоимости демонтажа.
+          </p>
+        </div>
+        <form class="popup-form" >
+          <p class="form-title">оставьте заявку</p>
+          <div class="personal">
+            <fieldset>
+              <input class="input input-name req" type="text" name="name" />
+              <legend>Ваше имя</legend>
+            </fieldset>
+            <fieldset>
+              <input
+                class="input input-tel req"
+                type="text"
+                name="phone"
+                data-phone-pattern="+7 (___) ___-__-__"
+              />
+              <legend>Номер телефона</legend>
+            </fieldset>
+          </div>
+          <fieldset class="comment">
+            <textarea
+              name="message"
+              placeholder="Опишите Ваш вопрос или просьбу и удобное время для связи."
+            ></textarea>
+            <legend>Комментарий</legend>
+          </fieldset>
+          <div class="submit">
+            <div class="checkbox">
+              <input class="checkbox__input req" type="checkbox" id="popup-checkbox-3" />
+              <label class="checkbox__label" for="popup-checkbox-3"
+                ><p>Я ознакомлен и согласен с <span>правилами</span></p></label
+              >
+            </div>
+
+            <button type="submit" class="btn-submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="popup" data-target="four">
+      <div class="popup__inner">
+        <div class="popup__header">
+          <img src="img/activity/popup/block-1.jpg" alt="block-1" />
+          <div class="popup-close">
+            <img src="img/activity/popup/popup-close.svg" alt="popup-close" />
+          </div>
+        </div>
+        <div class="popup__description">
+          <h2 class="popup-title">Электротехническое строительство</h2>
+          <p class="popup-text">
+            Компания «СтройЭнергоГРУПП» выполняет монтаж систем вентиляции . Проектирование и
+            установка осуществляются в соответствии с требованиями ГОСТ. Мы гарантируем
+            бесперебойную и надежную работу оборудования.
+          </p>
+          <p class="popup-text">
+            Стоимость монтажа вентиляционной системы определяется особенностями объекта, качеством и
+            количеством использованного оборудования. Поэтому специалисты начинают работу с
+            подробного изучения здания и составления индивидуального проекта с учетом технических
+            условий на объекте.
+          </p>
+          <p class="popup-text">
+            Если монтаж производится в эксплуатируемом здании, работы начинаются с демонтажа
+            имеющейся системы кондиционирования и вентиляционного оборудования. В таком случае при
+            расчете цены на монтаж вентиляции будет учтена стоимости демонтажа.
+          </p>
+        </div>
+        <form class="popup-form" >
+          <p class="form-title">оставьте заявку</p>
+          <div class="personal">
+            <fieldset>
+              <input class="input input-name req" type="text" name="name" />
+              <legend>Ваше имя</legend>
+            </fieldset>
+            <fieldset>
+              <input
+                class="input input-tel req"
+                type="text"
+                name="phone"
+                data-phone-pattern="+7 (___) ___-__-__"
+              />
+              <legend>Номер телефона</legend>
+            </fieldset>
+          </div>
+          <fieldset class="comment">
+            <textarea
+              name="message"
+              placeholder="Опишите Ваш вопрос или просьбу и удобное время для связи."
+            ></textarea>
+            <legend>Комментарий</legend>
+          </fieldset>
+          <div class="submit">
+            <div class="checkbox">
+              <input class="checkbox__input req" type="checkbox" id="popup-checkbox-4" />
+              <label class="checkbox__label" for="popup-checkbox-4"
+                ><p>Я ознакомлен и согласен с <span>правилами</span></p></label
+              >
+            </div>
+
+            <button type="submit" class="btn-submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="popup" data-target="five">
+      <div class="popup__inner">
+        <div class="popup__header">
+          <img src="img/activity/popup/block-1.jpg" alt="block-1" />
+          <div class="popup-close">
+            <img src="img/activity/popup/popup-close.svg" alt="popup-close" />
+          </div>
+        </div>
+        <div class="popup__description">
+          <h2 class="popup-title">Проектирование</h2>
+          <p class="popup-text">
+            Компания «СтройЭнергоГРУПП» выполняет монтаж систем вентиляции . Проектирование и
+            установка осуществляются в соответствии с требованиями ГОСТ. Мы гарантируем
+            бесперебойную и надежную работу оборудования.
+          </p>
+          <p class="popup-text">
+            Стоимость монтажа вентиляционной системы определяется особенностями объекта, качеством и
+            количеством использованного оборудования. Поэтому специалисты начинают работу с
+            подробного изучения здания и составления индивидуального проекта с учетом технических
+            условий на объекте.
+          </p>
+          <p class="popup-text">
+            Если монтаж производится в эксплуатируемом здании, работы начинаются с демонтажа
+            имеющейся системы кондиционирования и вентиляционного оборудования. В таком случае при
+            расчете цены на монтаж вентиляции будет учтена стоимости демонтажа.
+          </p>
+        </div>
+        <form class="popup-form" >
+          <p class="form-title">оставьте заявку</p>
+          <div class="personal">
+            <fieldset>
+              <input class="input input-name req" type="text" name="name" />
+              <legend>Ваше имя</legend>
+            </fieldset>
+            <fieldset>
+              <input
+                class="input input-tel req"
+                type="text"
+                name="phone"
+                data-phone-pattern="+7 (___) ___-__-__"
+              />
+              <legend>Номер телефона</legend>
+            </fieldset>
+          </div>
+          <fieldset class="comment">
+            <textarea
+              name="message"
+              placeholder="Опишите Ваш вопрос или просьбу и удобное время для связи."
+            ></textarea>
+            <legend>Комментарий</legend>
+          </fieldset>
+          <div class="submit">
+            <div class="checkbox">
+              <input class="checkbox__input req" type="checkbox" id="popup-checkbox-5" />
+              <label class="checkbox__label" for="popup-checkbox-5"
                 ><p>Я ознакомлен и согласен с <span>правилами</span></p></label
               >
             </div>
@@ -396,24 +595,30 @@
             <p class="form-title">оставьте заявку</p>
             <div class="personal">
               <fieldset>
-                <input class="input input-name" type="text" id="name" data-reg="^[А-ЯЁ][а-яё]*$" />
+                <input class="input input-name req" type="text" id="name" name="name" />
                 <legend>Ваше имя</legend>
               </fieldset>
               <fieldset>
-                <input class="input input-tel" type="tel" data-phone-pattern="+7 (___) ___-__-__"    data-reg="^((\+7|7|8)+([0-9]){10})$" />
+                <input
+                  class="input input-tel req"
+                  type="text"
+                  name="phone"
+                  data-phone-pattern="+7 (___) ___-__-__"
+                />
                 <legend>Номер телефона</legend>
               </fieldset>
             </div>
             <fieldset class="comment">
               <textarea
+                name="message"
                 placeholder="Опишите Ваш вопрос или просьбу и удобное время для связи."
               ></textarea>
               <legend>Комментарий</legend>
             </fieldset>
             <div class="submit">
               <div class="checkbox">
-                <input class="checkbox__input" type="checkbox" id="formAgreement" />
-                <label class="checkbox__label" for="formAgreement"
+                <input class="checkbox__input req" type="checkbox" id="checkbox" />
+                <label class="checkbox__label" for="checkbox"
                   ><p>Я ознакомлен и согласен с <span>правилами</span></p></label
                 >
               </div>
@@ -421,6 +626,17 @@
               <button type="submit" class="btn-submit">Отправить</button>
             </div>
           </form>
+          <div class="response__success">
+            <p class="success__title">ваша заявка отправлена,</p>
+            <p class="success__text">мы свяжемся с Вами в ближайшее время.</p>
+          </div>
+          <div class="response__error">
+            <p class="error__title">ошибка отправки формы</p>
+            <p class="error__text">
+              При отправке формы произошла ошибка,
+              <span class="try__again">попробуйте ещё раз</span>.
+            </p>
+          </div>
           <div class="policy-hidden">
             <p>Все права защищены 2010 - 2022 © ООО «СтройЭнергоГРУПП»</p>
             <p>Политика обработки персональных данных</p>

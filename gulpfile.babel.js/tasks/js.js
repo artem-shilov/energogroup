@@ -8,6 +8,7 @@ import app from '../config/app.js';
 import babel from 'gulp-babel';
 import webpack from 'webpack-stream';
 import concat from 'gulp-concat';
+import rename  from 'gulp-rename';
 import plumber from 'gulp-plumber';
 
 //Обработка JavaScript
@@ -16,6 +17,7 @@ const js = () => {
   .pipe(plumber())
   .pipe(babel())
   .pipe(webpack(app.webpack))
+  // .pipe(rename("main.min.js"))
   .pipe(concat("main.min.js"))
   .pipe(gulp.dest(path.js.dest, {sourcemaps: app.isDev}))
 }

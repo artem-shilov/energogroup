@@ -1,4 +1,4 @@
-const isProd = process.argv.includes("--production");
+const isProd = process.argv.includes('--production');
 const isDev = !isProd;
 
 export default {
@@ -9,6 +9,10 @@ export default {
     collapseWhitespace: isProd,
   },
   webpack: {
-    mode: isProd ? "production" : "development",
+    mode: isProd ? 'production' : 'development',
+  },
+  webpCss: {
+    webpClass: '.webp',
+    noWebpClass: '.no-webp',
   },
 };

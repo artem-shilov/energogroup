@@ -12,33 +12,29 @@ import scss from './tasks/scss.js';
 import js from './tasks/js.js';
 import img from './tasks/img.js';
 import font from './tasks/font.js';
+import php from './tasks/php.js';
 
 //Сервер
 const server = () => {
-    browserSync.init({
-        server: {
-            baseDir: path.root
-        }
-    })
-}
+  browserSync.init({
+    server: {
+      baseDir: path.root,
+    },
+  });
+};
 
 //Наблюдение
 const watcher = () => {
-    gulp.watch(path.html.watch, html).on('all', browserSync.reload);
-    gulp.watch(path.scss.watch, scss);
-    gulp.watch(path.js.watch, js).on('all', browserSync.reload);
-    gulp.watch(path.img.watch, img).on('all', browserSync.reload);
-    gulp.watch(path.font.watch, font).on('all', browserSync.reload);
-}
+  gulp.watch(path.html.watch, html).on('all', browserSync.reload);
+  gulp.watch(path.php.watch, php).on('all', browserSync.reload);
+  gulp.watch(path.scss.watch, scss);
+  gulp.watch(path.js.watch, js).on('all', browserSync.reload);
+  gulp.watch(path.img.watch, img).on('all', browserSync.reload);
+  gulp.watch(path.font.watch, font).on('all', browserSync.reload);
+};
 
-const build = gulp.series(
-    clear,
-    gulp.parallel(html, scss, js, img, font),
-);
-const dev = gulp.series(
-    build,
-    gulp.parallel(watcher, server)
-)
+const build = gulp.series(clear, gulp.parallel(html, scss, js, img, font,php));
+const dev = gulp.series(build, gulp.parallel(watcher, server));
 
 //Задачи
 export { html };
@@ -46,8 +42,7 @@ export { scss };
 export { js };
 export { img };
 export { font };
+export { php };
 
 //Сборка
-export default app.isProd
-    ? build
-    : dev;
+export default app.isProd ? build : dev;

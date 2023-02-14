@@ -6,7 +6,8 @@ import app from '../config/app.js';
 
 //Плагины
 import htmlmin from 'gulp-htmlmin';
-import webpHtml from 'gulp-webp-html';
+import webpHtml from 'gulp-webp-html-nosvg';
+// import webpHtml from 'gulp-webp-html';
 import plumber from 'gulp-plumber';
 
 //Обработка HTML

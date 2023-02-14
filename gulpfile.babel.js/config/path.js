@@ -1,5 +1,5 @@
 const pathSrc = "./src";
-const pathDest = "./public";
+const pathDest = "./dist";
 
 export default {
   root: pathDest,
@@ -7,6 +7,11 @@ export default {
   html: {
     src: pathSrc + "/html/*.html",
     watch: pathSrc + "/html/**/*.html",
+    dest: pathDest,
+  },
+  php: {
+    src: pathSrc + "/php/**/*.php",
+    watch: pathSrc + "/php/**/*.php",
     dest: pathDest,
   },
   scss: {

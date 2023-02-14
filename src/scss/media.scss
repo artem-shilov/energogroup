@@ -61,12 +61,12 @@
     font-size: 16px;
     line-height: 160%;
   }
-  .slick-list {
-    margin: 0 -7px;
-  }
-  .slick-slide {
-    margin: 0 7px;
-  }
+  // .slick-list {
+  //   margin: 0 -7px;
+  // }
+  // .slick-slide {
+  //   margin: 0 7px;
+  // }
 
   .footer__content {
     gap: 58px;
@@ -103,15 +103,15 @@
   .header__inner {
     display: flex;
     // flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    // justify-content: space-between;
+    // align-items: center;
     // width: 100%;
   }
   .header {
     position: fixed;
     width: 100%;
     padding-bottom: 20px;
-    z-index: 100;
+    // z-index: 100;
     background: #ffffff;
   }
   .logo {
@@ -229,12 +229,12 @@
     // background: url('../img/intro/background-md.jpg') center no-repeat;
     // background-size: cover;
     margin-bottom: 63px;
-    min-height: 40vh;
+    min-height: 50vh;
     // margin-top: 70px;
   }
   .intro__content {
     align-items: center;
-    top: 15%;
+    top: 20%;
     margin-bottom: 63px;
   }
   .intro__logo {
@@ -541,9 +541,7 @@
     margin-bottom: 44px;
     // height: 252px;
   }
-  .intro__content {
-    top: 40%;
-  }
+ 
   .logo a {
     font-size: 17px;
     line-height: 21px;
