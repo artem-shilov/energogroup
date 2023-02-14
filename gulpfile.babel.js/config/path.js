@@ -1,5 +1,5 @@
 const pathSrc = "./src";
-const pathDest = "./public";
+const pathDest = "./dist";
 
 export default {
   root: pathDest,
