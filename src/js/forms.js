@@ -1,17 +1,17 @@
-const form = document.querySelector('.form');
-const responseError = document.querySelector('.response__error');
-const tryAgain = document.querySelector('.try__again');
-const responseSuccess = document.querySelector('.response__success');
-
+const forms = document.querySelectorAll('.form');
+// const responseError = document.querySelector('.response__error');
+// const tryAgain = document.querySelector('.try__again');
+// const responseSuccess = document.querySelector('.response__success');
 
 // for (let form of forms) {
+forms.forEach((form) => {
   form.addEventListener('submit', formSend);
-
+  
   async function formSend(e) {
     e.preventDefault();
     let error = formValidate(form);
     let formData = new FormData(form);
-    console.log(...formData)
+    console.log(...formData);
     if (error === 0) {
       let response = await fetch('sendmail.php', {
         method: 'POST',
@@ -19,17 +19,18 @@ const responseSuccess = document.querySelector('.response__success');
       });
       if (response.ok) {
         let result = await response.json();
-        responseSuccess.classList.add('show');
+        alert(result.message);
+        // responseSuccess.classList.add('show');
       } else {
-    
-        form.classList.add('hide');
-        responseError.classList.add('show');
+        alert('Ошибка отправки');
+        // form.classList.add('hide');
+        // responseError.classList.add('show');
         form.reset();
 
-        tryAgain.addEventListener('click', () => {
-          form.classList.remove('hide');
-          responseError.classList.remove('show');
-        });
+        // tryAgain.addEventListener('click', () => {
+        //   form.classList.remove('hide');
+        //   responseError.classList.remove('show');
+        // });
       }
     }
   }
@@ -55,17 +56,18 @@ const responseSuccess = document.querySelector('.response__success');
     }
     return error;
   }
-// }
+  // }
 
-function formAddError(input) {
-  input.parentElement.classList.add('error');
-  input.classList.add('error');
-}
-function formRemoveError(input) {
-  input.parentElement.classList.remove('error');
-  input.classList.remove('error');
-}
-
+  function formAddError(input) {
+    input.parentElement.classList.add('error');
+    input.classList.add('error');
+  }
+  function formRemoveError(input) {
+    input.parentElement.classList.remove('error');
+    input.classList.remove('error');
+  }
+});
+// form.addEventListener('submit', formSend);
 
 var eventCalllback = function (e) {
   var el = e.target,
@@ -93,5 +95,3 @@ for (let elem of phone_inputs) {
     elem.addEventListener(ev, eventCalllback);
   }
 }
-
-

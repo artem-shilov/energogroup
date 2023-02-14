@@ -15,7 +15,7 @@
     $message = $_POST["message"];
 
    
-    $mail->addAddress("artemshilov75@gmail.com");  
+    $mail->addAddress("mail@gmail.com");  
 	// $mail->setFrom($email);
     $mail->Subject = "[Заявка с формы]";
 

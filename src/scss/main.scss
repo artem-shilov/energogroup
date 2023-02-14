@@ -340,7 +340,7 @@ input:-webkit-autofill:active {
       // padding-left: 22px;
     }
     &:nth-child(2) {
-      background: url('../img/activity/block-2.png');
+      background: url('../img/activity/block-2.png') ;
       height: calc(100% + 37px);
       margin-top: -37px;
       // background: url('../img/activity/crane.png') center no-repeat,
@@ -546,7 +546,7 @@ input:-webkit-autofill:active {
   @extend %btn-slider;
 }
 .footer {
-  background: url('../img/footer/background.jpg');
+  background-image: url('../img/footer/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -655,11 +655,19 @@ input:-webkit-autofill:active {
   }
 }
 fieldset.error {
-  background-color: rgb(125, 87, 87);
+    // box-shadow: 0 0 30px rgb(164, 5, 5);
+  // background-color: rgb(113, 62, 62);
+  // background-color: rgb(236, 105, 105);
+  // transition: .3s;
+  // background-color: rgb(214, 86, 86);
+  box-shadow: 0 1px 15px rgb(248, 59, 59);
 }
 .checkbox.error .checkbox__label::before {
-  background-color: rgb(125, 87, 87);
-  // box-shadow: 0 0 15px rgb(192, 22, 22);
+  // background-color: rgb(214, 86, 86);
+
+  box-shadow: 0 1px 15px rgb(248, 59, 59);
+  // background-color: rgb(125, 87, 87);
+
   // background-color:rgb(185, 120, 120) ;
 }
 .response__success {
